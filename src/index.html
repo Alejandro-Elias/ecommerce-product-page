@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link href="./output.css" rel="stylesheet">
+  <link href="./styles.css" rel="stylesheet">
+
+  <title>Frontend Mentor | E-commerce product page</title>
+</head>
+
+<body class="relative">
+  <div class="flex h-4 justify-between m-5">
+    <div class="flex gap-4 place-items-baseline">
+      <img class="h-[14px]" src="../images/icon-menu.svg" alt="Icon menu">
+      <img src="../images/logo.svg" alt="Logo Sneakers">
+    </div>
+    <div class="flex justify-end gap-7 h-6 items-center">
+      <img class="h-5" src="../images/icon-cart.svg" alt="icon cart">
+      <img class="h-6" src="../images/image-avatar.png" alt="image avatar">
+    </div>
+  </div>
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="../images/image-product-1.jpg" alt="image product 1"></div>
+      <div class="swiper-slide"><img src="../images/image-product-2.jpg" alt="image product 2"></div>
+      <div class="swiper-slide"><img src="../images/image-product-3.jpg" alt="image product 3"></div>
+      <div class="swiper-slide"><img src="../images/image-product-4.jpg" alt="image product 4"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <div class="absolute w-[50%] left-[-50%] bg-white"> 
+    <ul>
+      <li>Collections</li>
+      <li>Men</li>
+      <li>Women</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+  </div>
+  
+
+  <div>
+    <p class="text-dgb pl-4 pt-6 font-bold uppercase text-xs tracking-[2px]">Sneaker Company</p>
+    <h1 class="text-[29px] font-bold pl-4 pt-3 leading-8 text-vdb">Fall Limited Edition Sneakers</h1>
+    <p class="text-dgb p-4 mt-1 text-[15px] tracking-wide leading-6">These low-profile sneakers are your perfect casual wear companion. Featuring a
+      durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+  </div>
+
+  <div class="flex w-screen px-4 mt-2">
+    <p class="w-2/6 text-3xl font-bold text-vdb">$125.00</p>
+    <div class="flex items-center justify-between w-4/6">
+      <p class="bg-vdb rounded text-white w-12 h-7 text-center flex justify-center items-center font-semibold ml-2">50%</p>
+      <p class="mr-2 text-dgb line-through decoration-solid decoration-dgb font-bold">$250.00</p>
+    </div>
+  </div>
+
+  <div class="flex flex-row-reverse justify-between items-center bg-lgb h-14 px-6 m-4 mt-6 rounded-xl">
+    <img class="w-3" src="../images/icon-plus.svg" alt="Icon Plus">
+    <p class="font-semibold">0</p>
+    <img class="w-3" src="../images/icon-minus.svg" alt="Icon Minus">
+  </div>
+  <div class="w-screen px-4">
+    <button class="w-full bg-naranja rounded-lg h-14 flex items-center justify-center gap-3 text-vdb font-bold mb-[60px]"><img class="w-[18px]" src="../images/icon-cart-copia.svg" alt="Icon Cart"> Add to cart</button>
+  </div>
+
+ 
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+</body>
+
+</html>
