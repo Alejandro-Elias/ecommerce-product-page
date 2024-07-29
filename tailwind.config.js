@@ -9,7 +9,9 @@ module.exports = {
         'gb': 'hsl(220, 14%, 75%)',
         'lgb': 'hsl(223, 64%, 98%)',
         'bo': 'hsl(0, 0%, 0%)',
-        'naranja': 'hsl(26, 100%, 55%)'
+        'naranja': 'hsl(26, 100%, 55%)',
+        'naranja-': 'hsl(26, 100%, 65%)',
+        "semi-negro": "rgba(0, 0, 0, 0.8)"
       }
     },
   },

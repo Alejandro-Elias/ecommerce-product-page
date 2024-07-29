@@ -53,3 +53,65 @@ document.getElementById("delete").addEventListener("click", () => {
   document.getElementById("div-number-cart").classList.add("hidden");
   document.getElementById("icon-cart-header").setAttribute("src", "../images/icon-cart.svg");
 })
+
+document.getElementById("image1").addEventListener("click", () => {
+  const image1 = document.getElementById("image1").getAttribute("src");
+  document.getElementById("div-image1").classList.add("border-naranja","border-2");
+  document.getElementById("image1").classList.add("opacity-40");
+  document.getElementById("image-product").setAttribute("src", image1)  
+  document.getElementById("div-image2").classList.remove("border-naranja","border-2");
+  document.getElementById("image2").classList.remove("opacity-40");
+  document.getElementById("div-image3").classList.remove("border-naranja","border-2");
+  document.getElementById("image3").classList.remove("opacity-40");
+  document.getElementById("div-image4").classList.remove("border-naranja","border-2");
+  document.getElementById("image4").classList.remove("opacity-40");
+})
+
+document.getElementById("image2").addEventListener("click", () => {
+  const image1 = document.getElementById("image2").getAttribute("src");
+  document.getElementById("image-product").setAttribute("src", image1)
+  document.getElementById("div-image2").classList.add("border-naranja","border-2");
+  document.getElementById("image2").classList.add("opacity-40");
+  document.getElementById("div-image1").classList.remove("border-naranja","border-2");
+  document.getElementById("image1").classList.remove("opacity-40");
+  document.getElementById("div-image3").classList.remove("border-naranja","border-2");
+  document.getElementById("image3").classList.remove("opacity-40");
+  document.getElementById("div-image4").classList.remove("border-naranja","border-2");
+  document.getElementById("image4").classList.remove("opacity-40");
+
+})
+
+document.getElementById("image3").addEventListener("click", () => {
+  const image1 = document.getElementById("image3").getAttribute("src");
+  document.getElementById("image-product").setAttribute("src", image1)
+  document.getElementById("div-image3").classList.add("border-naranja","border-2");
+  document.getElementById("image3").classList.add("opacity-40");
+  document.getElementById("div-image1").classList.remove("border-naranja","border-2");
+  document.getElementById("image1").classList.remove("opacity-40");
+  document.getElementById("div-image2").classList.remove("border-naranja","border-2");
+  document.getElementById("image2").classList.remove("opacity-40");
+  document.getElementById("div-image4").classList.remove("border-naranja","border-2");
+  document.getElementById("image4").classList.remove("opacity-40");
+})
+
+document.getElementById("image4").addEventListener("click", () => {
+  const image1 = document.getElementById("image4").getAttribute("src");
+  document.getElementById("image-product").setAttribute("src", image1)
+  document.getElementById("div-image4").classList.add("border-naranja","border-2");
+  document.getElementById("image4").classList.add("opacity-40");
+  document.getElementById("div-image1").classList.remove("border-naranja","border-2");
+  document.getElementById("image1").classList.remove("opacity-40");
+  document.getElementById("div-image2").classList.remove("border-naranja","border-2");
+  document.getElementById("image2").classList.remove("opacity-40");
+  document.getElementById("div-image3").classList.remove("border-naranja","border-2");
+  document.getElementById("image3").classList.remove("opacity-40");
+})
+
+document.getElementById("image-product").addEventListener("click", () =>  {
+  document.getElementById("modal").classList.add("block")
+  document.getElementById("modal").classList.remove("hidden")   
+})
+
+function closeModal() {
+  document.getElementById("modal").classList.add("hidden")    
+}

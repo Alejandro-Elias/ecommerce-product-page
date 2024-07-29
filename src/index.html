@@ -17,9 +17,28 @@
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
 
-<body class="relative sm:px-[136px] sm:pt-5">
+<body class="relative sm:px-24 sm:pt-5 backdrop-opacity-25">
+
+  <div id="modal" class="absolute w-screen h-full left-0 px-[30%] pt-2 bg-semi-negro hidden">
+    <div class="swiper mySwiper">
+      <div class="flex justify-end">
+        <button onclick="closeModal()" href="#"><img src="../images/icon-close - naranja.svg" alt=""></button></li>
+      </div>
+      
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide"><img src="../images/image-product-1.jpg" alt="image product 1"></div>
+        <div class="swiper-slide"><img src="../images/image-product-2.jpg" alt="image product 2"></div>
+        <div class="swiper-slide"><img src="../images/image-product-3.jpg" alt="image product 3"></div>
+        <div class="swiper-slide"><img src="../images/image-product-4.jpg" alt="image product 4"></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+
   <div id="carrito"
-    class="absolute h-[32%] w-[96%] ml-[1.5%] z-[10] top-[7%] bg-white rounded-lg mt-1 hidden animate__animated animate__fadeInDown">
+    class="absolute h-[32%] w-[96%] ml-[1.5%] z-[10] top-[7%] bg-white rounded-lg mt-1 hidden animate__animated animate__fadeInDown sm:w-[27%] sm:right-14 sm:top-20 sm:drop-shadow-[0_10px_10px_rgba(0,0,0,0.3)]">
     <h1 class="font-bold p-5">Cart</h1>
     <hr>
     <div class="flex flex-col h-44 p-0 m-0 justify-evenly items-center mt-4">
@@ -66,27 +85,31 @@
       <img src="../images/logo.svg" alt="Logo Sneakers">
 
 
-      <div class="hidden sm:block ml-10">
+      <div class="hidden sm:block ml-8">
         <ul class="flex gap-x-8">
-          <li class="text-dgb" class="mb-4 font-bold text-vdb text-lg">Collections</li>
-          <li class="text-dgb" class="mb-4 font-bold text-vdb text-lg">Men</li>
-          <li class="text-dgb" class="mb-4 font-bold text-vdb text-lg">Women</li>
-          <li class="text-dgb" class="mb-4 font-bold text-vdb text-lg">About</li>
-          <li class="text-dgb" class="mb-4 font-bold text-vdb text-lg">Contact</li>
+          <li class="text-dgb" class="mb-4 font-bold text-vdb text-lg"><a href="#">Collections</a></li>
+          <li class="text-dgb" class="mb-4 font-bold text-vdb text-lg"><a href="#">Men</a></li>
+          <li class="text-dgb" class="mb-4 font-bold text-vdb text-lg"><a href="#">Women</a></li>
+          <li class="text-dgb" class="mb-4 font-bold text-vdb text-lg"><a href="#">About</a></li>
+          <li class="text-dgb" class="mb-4 font-bold text-vdb text-lg"><a href="#">Contact</a></li>
         </ul>
       </div>
 
     </div>
-    <div class="flex justify-end gap-7 h-6 items-center relative">
+    <div class="flex justify-end gap-4 h-6 items-center relative pr-2">
       <button onclick="viewCart()" class="cursor-pointer sm:mr-8"><img id="icon-cart-header" class="h-5"
           src="../images/icon-cart.svg" alt="icon cart"></button>
-      <img class="h-6 sm:h-12" src="../images/image-avatar.png" alt="image avatar">
+      <img class="h-6 sm:h-12 hover:border-2 hover:border-naranja rounded-[50%]" src="../images/image-avatar.png"
+        alt="image avatar">
       <div id="div-number-cart"
         class="absolute bg-naranja w-4 h-4 z-10 left-3 -top-1 rounded-[50%] flex justify-center items-center hidden">
         <p id="number-cart" class="text-white text-xs"></p>
       </div>
     </div>
+
   </div>
+
+  <hr class="mt-14 mx-4 mr-12">
 
   <div class="swiper mySwiper sm:hidden">
     <div class="swiper-wrapper">
@@ -100,32 +123,36 @@
     <div class="swiper-button-prev"></div>
   </div>
 
+
+
   <div class="flex w-full">
 
-    <div class="hidden sm:flex flex-col gap-8 w-1/2 p-16 pt-32">
-      <div class="w-full"><img class="w-full rounded-2xl" src="../images/image-product-1.jpg" alt="image product 1">
+    <div class="hidden sm:flex flex-col gap-8 w-1/2 p-[68px] pt-[92px]">
+      <div class="w-full"><img id="image-product" class="w-full rounded-2xl" src="../images/image-product-1.jpg"
+          alt="image product 1">
       </div>
       <div class="flex gap-10 w-full">
-        <div class="w-1/4" class="swiper-slide"><img class="rounded-xl" src="../images/image-product-1.jpg"
-            alt="image product 1"></div>
-        <div class="w-1/4" class="swiper-slide"><img class="rounded-xl" src="../images/image-product-2.jpg"
-            alt="image product 2"></div>
-        <div class="w-1/4" class="swiper-slide"><img class="rounded-xl" src="../images/image-product-3.jpg"
-            alt="image product 3"></div>
-        <div class="w-1/4" class="swiper-slide"><img class="rounded-xl" src="../images/image-product-4.jpg"
-            alt="image product 4"></div>
+        <div id="div-image1" class="w-1/4 rounded-xl"><img id="image1" class="rounded-xl hover:opacity-40 "
+            src="../images/image-product-1.jpg" alt="image product 1"></div>
+        <div id="div-image2" class="w-1/4 rounded-xl"><img id="image2" class="rounded-xl hover:opacity-40 "
+            src="../images/image-product-2.jpg" alt="image product 2"></div>
+        <div id="div-image3" class="w-1/4 rounded-xl"><img id="image3" class="rounded-xl hover:opacity-40 "
+            src="../images/image-product-3.jpg" alt="image product 3"></div>
+        <div id="div-image4" class="w-1/4 rounded-xl"><img id="image4" class="rounded-xl hover:opacity-40 "
+            src="../images/image-product-4.jpg" alt="image product 4"></div>
       </div>
 
     </div>
 
-    <div class="sm:w-1/2 sm:pt-40 sm:pl-12">
-      <div class="sm:w-full">
+    <div class="sm:w-1/2 sm:pt-32 sm:pl-6">
+      <div class="sm:w-full sm:mt-1">
         <p class="text-dgb pl-4 pt-6 font-bold uppercase text-xs tracking-[2px]">Sneaker Company</p>
-        <h1 class="text-[29px] font-bold pl-4 pt-3 leading-8 text-vdb sm:text-5xl sm-mt-4">Fall Limited Edition Sneakers</h1>
-        <p class="text-dgb p-4 mt-1 text-[15px] tracking-wide leading-6 sm:leading-7 sm:mt-5 sm:text-base sm:text-gb sm:font-bold">These
-          low-profile sneakers are your perfect
-          casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can
-          offer.</p>
+        <h1 class="text-[29px] font-bold pl-4 pt-4 leading-8 text-vdb sm:text-5xl sm-mt-4">Fall Limited Edition Sneakers
+        </h1>
+        <p
+          class="text-dgb p-4 mt-1 text-[15px] tracking-wide leading-6 sm:leading-[26px] sm:pr-6 sm:mt-5 sm:text-base sm:text-gb sm:font-bold">
+          These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole,
+          they’ll withstand everything the weather can offer.</p>
       </div>
 
       <div class="flex w-screen px-4 mt-2 sm:w-full sm:flex-col">
@@ -138,20 +165,21 @@
           </p>
         </div>
 
-        <div class="flex items-center justify-end w-4/6 sm:justify-start sm:mt-4">
+        <div class="flex items-center justify-end w-4/6 sm:justify-start sm:mt-2">
           <p class="mr-2 text-dgb line-through decoration-solid decoration-dgb font-bold">$250.00</p>
         </div>
       </div>
 
-      <div class="sm:flex sm:mt-5">
-        <div class="flex flex-row-reverse justify-between items-center bg-lgb h-14 px-6 m-4 mt-6 sm:mt-0 rounded-xl sm:w-2/6 sm:m-0">
+      <div class="sm:flex sm:mt-9">
+        <div
+          class="flex flex-row-reverse justify-between items-center bg-lgb h-14 px-6 m-4 mt-6 sm:mt-0 rounded-xl sm:w-2/6 sm:m-0">
           <button id="plus"><img class="w-3" src="../images/icon-plus.svg" alt="Icon Plus"></button>
           <p id="count" class="font-extrabold">0</p>
           <button id="minus"><img class="w-3" src="../images/icon-minus.svg" alt="Icon Minus"></button>
         </div>
         <div class="w-screen px-4 sm:w-4/6 sm:pr-16">
           <button onclick="addToCart()"
-            class="w-full bg-naranja rounded-lg h-14 flex items-center justify-center gap-3 text-vdb font-bold mb-[60px]"><img
+            class="w-full bg-naranja rounded-lg h-14 flex items-center justify-center gap-3 text-vdb font-bold mb-[60px] hover:bg-naranja-"><img
               class="w-[18px]" src="../images/icon-cart-copia.svg" alt="Icon Cart"> Add to cart</button>
         </div>
       </div>
