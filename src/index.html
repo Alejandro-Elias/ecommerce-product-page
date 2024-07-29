@@ -10,47 +10,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="./output.css" rel="stylesheet">
   <link href="./styles.css" rel="stylesheet">
 
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
 
-<body class="relative">
-    <div id="carrito" class="absolute h-[32%] w-[96%] ml-[1.5%] z-[10] top-[7%] bg-white rounded-lg mt-1 hidden animate__animated animate__fadeInDown">
-      <h1 class="font-bold p-5">Cart</h1>
-      <hr>
-      <div class="flex flex-col h-44 p-0 m-0 justify-evenly items-center mt-4">
-        <p id="empty" class="text-dgb font-bold -mt-8">You cart is empty.</p>
-        
-        <div id="product-cart" class="hidden">
-          <div class="flex items-center w-full h-14 pl-5">
-            <div class="w-[25%]">
-              <img class="w-[60%] h-[30%] rounded-md" src="../images/image-product-1-thumbnail.jpg" alt="image product 1">
-            </div>
-            
-            <div class="w-[62.5%] -ml-4 mr-2 text-dgb">
-              <p class="">Fall Limited Edition Sneaker</p>
-              <p>$125.00 x <span id="cantidad"></span><span id="resultado" class="font-semibold text-black"></span></p>
-            </div>
-            <div class="w-[12.5%]">
-              <button id="delete"><img class="my-0 mx-3" src="../images/icon-delete.svg" alt="Icon Delete"></button>
-            </div>
-            
-          </div>
-          <div class="w-full p-5">
-            <button class="w-full h-14 bg-naranja rounded-xl font-bold">Checkout</button>
-          </div>
-         
-        </div>
-      </div>      
-  </div>
+<body class="relative sm:px-[136px] sm:pt-5">
+  <div id="carrito"
+    class="absolute h-[32%] w-[96%] ml-[1.5%] z-[10] top-[7%] bg-white rounded-lg mt-1 hidden animate__animated animate__fadeInDown">
+    <h1 class="font-bold p-5">Cart</h1>
+    <hr>
+    <div class="flex flex-col h-44 p-0 m-0 justify-evenly items-center mt-4">
+      <p id="empty" class="text-dgb font-bold -mt-8">You cart is empty.</p>
 
-  
+      <div id="product-cart" class="hidden">
+        <div class="flex items-center w-full h-14 pl-5">
+          <div class="w-[25%]">
+            <img class="w-[60%] h-[30%] rounded-md" src="../images/image-product-1-thumbnail.jpg" alt="image product 1">
+          </div>
+
+          <div class="w-[62.5%] -ml-4 mr-2 text-dgb">
+            <p class="">Fall Limited Edition Sneaker</p>
+            <p>$125.00 x <span id="cantidad"></span><span id="resultado" class="font-semibold text-vdb ml-2"></span></p>
+          </div>
+          <div class="w-[12.5%]">
+            <button id="delete"><img class="my-0 mx-3" src="../images/icon-delete.svg" alt="Icon Delete"></button>
+          </div>
+
+        </div>
+        <div class="w-full p-5">
+          <button class="w-full h-14 bg-naranja rounded-xl font-bold text-vdb">Checkout</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
   <div id="menu" class="absolute z-50 h-full w-[67%] hidden bg-white animate__animated ">
     <ul class="pl-5">
@@ -65,20 +61,34 @@
 
   <div class="flex h-4 justify-between m-5">
     <div class="flex gap-4 place-items-baseline">
-      <button onclick="viewMenu()" class="cursor-pointer"><img class="h-[14px]" src="../images/icon-menu.svg" alt="Icon menu"></button>
+      <button onclick="viewMenu()" class="cursor-pointer md:hidden"><img class="h-[14px]" src="../images/icon-menu.svg"
+          alt="Icon menu"></button>
       <img src="../images/logo.svg" alt="Logo Sneakers">
+
+
+      <div class="hidden sm:block ml-10">
+        <ul class="flex gap-x-8">
+          <li class="text-dgb" class="mb-4 font-bold text-vdb text-lg">Collections</li>
+          <li class="text-dgb" class="mb-4 font-bold text-vdb text-lg">Men</li>
+          <li class="text-dgb" class="mb-4 font-bold text-vdb text-lg">Women</li>
+          <li class="text-dgb" class="mb-4 font-bold text-vdb text-lg">About</li>
+          <li class="text-dgb" class="mb-4 font-bold text-vdb text-lg">Contact</li>
+        </ul>
+      </div>
+
     </div>
     <div class="flex justify-end gap-7 h-6 items-center relative">
-      <button onclick="viewCart()" class="cursor-pointer"><img class="h-5" src="../images/icon-cart.svg"
-          alt="icon cart"></button>
-      <img class="h-6" src="../images/image-avatar.png" alt="image avatar">
-      <div id="div-number-cart" class="absolute bg-naranja w-4 h-4 z-10 left-3 -top-1 rounded-[50%] flex justify-center items-center hidden">
+      <button onclick="viewCart()" class="cursor-pointer sm:mr-8"><img id="icon-cart-header" class="h-5"
+          src="../images/icon-cart.svg" alt="icon cart"></button>
+      <img class="h-6 sm:h-12" src="../images/image-avatar.png" alt="image avatar">
+      <div id="div-number-cart"
+        class="absolute bg-naranja w-4 h-4 z-10 left-3 -top-1 rounded-[50%] flex justify-center items-center hidden">
         <p id="number-cart" class="text-white text-xs"></p>
       </div>
     </div>
   </div>
 
-  <div class="swiper mySwiper">
+  <div class="swiper mySwiper sm:hidden">
     <div class="swiper-wrapper">
 
       <div class="swiper-slide"><img src="../images/image-product-1.jpg" alt="image product 1"></div>
@@ -90,34 +100,71 @@
     <div class="swiper-button-prev"></div>
   </div>
 
+  <div class="flex w-full">
 
-  <div>
-    <p class="text-dgb pl-4 pt-6 font-bold uppercase text-xs tracking-[2px]">Sneaker Company</p>
-    <h1 class="text-[29px] font-bold pl-4 pt-3 leading-8 text-vdb">Fall Limited Edition Sneakers</h1>
-    <p class="text-dgb p-4 mt-1 text-[15px] tracking-wide leading-6">These low-profile sneakers are your perfect casual
-      wear companion. Featuring a
-      durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-  </div>
+    <div class="hidden sm:flex flex-col gap-8 w-1/2 p-16 pt-32">
+      <div class="w-full"><img class="w-full rounded-2xl" src="../images/image-product-1.jpg" alt="image product 1">
+      </div>
+      <div class="flex gap-10 w-full">
+        <div class="w-1/4" class="swiper-slide"><img class="rounded-xl" src="../images/image-product-1.jpg"
+            alt="image product 1"></div>
+        <div class="w-1/4" class="swiper-slide"><img class="rounded-xl" src="../images/image-product-2.jpg"
+            alt="image product 2"></div>
+        <div class="w-1/4" class="swiper-slide"><img class="rounded-xl" src="../images/image-product-3.jpg"
+            alt="image product 3"></div>
+        <div class="w-1/4" class="swiper-slide"><img class="rounded-xl" src="../images/image-product-4.jpg"
+            alt="image product 4"></div>
+      </div>
 
-  <div class="flex w-screen px-4 mt-2">
-    <p class="w-2/6 text-3xl font-bold text-vdb">$125.00</p>
-    <div class="flex items-center justify-between w-4/6">
-      <p class="bg-vdb rounded text-white w-12 h-7 text-center flex justify-center items-center font-semibold ml-2">50%
-      </p>
-      <p class="mr-2 text-dgb line-through decoration-solid decoration-dgb font-bold">$250.00</p>
     </div>
+
+    <div class="sm:w-1/2 sm:pt-40 sm:pl-12">
+      <div class="sm:w-full">
+        <p class="text-dgb pl-4 pt-6 font-bold uppercase text-xs tracking-[2px]">Sneaker Company</p>
+        <h1 class="text-[29px] font-bold pl-4 pt-3 leading-8 text-vdb sm:text-5xl sm-mt-4">Fall Limited Edition Sneakers</h1>
+        <p class="text-dgb p-4 mt-1 text-[15px] tracking-wide leading-6 sm:leading-7 sm:mt-5 sm:text-base sm:text-gb sm:font-bold">These
+          low-profile sneakers are your perfect
+          casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can
+          offer.</p>
+      </div>
+
+      <div class="flex w-screen px-4 mt-2 sm:w-full sm:flex-col">
+
+        <div class="flex items-end">
+          <p class=" text-3xl font-bold text-vdb">$125.00</p>
+          <p
+            class="bg-vdb rounded text-white w-12 h-7 text-center flex justify-center items-center font-semibold ml-2 sm:ml-6">
+            50%
+          </p>
+        </div>
+
+        <div class="flex items-center justify-end w-4/6 sm:justify-start sm:mt-4">
+          <p class="mr-2 text-dgb line-through decoration-solid decoration-dgb font-bold">$250.00</p>
+        </div>
+      </div>
+
+      <div class="sm:flex sm:mt-5">
+        <div class="flex flex-row-reverse justify-between items-center bg-lgb h-14 px-6 m-4 mt-6 sm:mt-0 rounded-xl sm:w-2/6 sm:m-0">
+          <button id="plus"><img class="w-3" src="../images/icon-plus.svg" alt="Icon Plus"></button>
+          <p id="count" class="font-extrabold">0</p>
+          <button id="minus"><img class="w-3" src="../images/icon-minus.svg" alt="Icon Minus"></button>
+        </div>
+        <div class="w-screen px-4 sm:w-4/6 sm:pr-16">
+          <button onclick="addToCart()"
+            class="w-full bg-naranja rounded-lg h-14 flex items-center justify-center gap-3 text-vdb font-bold mb-[60px]"><img
+              class="w-[18px]" src="../images/icon-cart-copia.svg" alt="Icon Cart"> Add to cart</button>
+        </div>
+      </div>
+
+    </div>
+
+
+
   </div>
 
-  <div class="flex flex-row-reverse justify-between items-center bg-lgb h-14 px-6 m-4 mt-6 rounded-xl">
-    <button id="plus"><img class="w-3" src="../images/icon-plus.svg" alt="Icon Plus"></button>
-    <p id="count" class="font-semibold">0</p>
-    <button id="minus"><img class="w-3" src="../images/icon-minus.svg" alt="Icon Minus"></button>
-  </div>
-  <div class="w-screen px-4">
-    <button onclick="addToCart()"
-      class="w-full bg-naranja rounded-lg h-14 flex items-center justify-center gap-3 text-vdb font-bold mb-[60px]"><img
-        class="w-[18px]" src="../images/icon-cart-copia.svg" alt="Icon Cart"> Add to cart</button>
-  </div>
+
+
+
 
 
 

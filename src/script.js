@@ -42,11 +42,14 @@ function addToCart() {
   document.getElementById("div-number-cart").classList.remove("hidden");
   document.getElementById("number-cart").innerHTML = count;
   document.getElementById("cantidad").innerHTML = count;
-  document.getElementById("resultado").innerHTML =" $" + count * 125 + ".00";
+  document.getElementById("resultado").innerHTML ="  $" + count * 125 + ".00";
+  document.getElementById("icon-cart-header").setAttribute("src", "../images/icon-cart-copia.svg");
+
 }
 
 document.getElementById("delete").addEventListener("click", () => {
   document.getElementById("empty").classList.remove("hidden");
   document.getElementById("product-cart").classList.add("hidden");
   document.getElementById("div-number-cart").classList.add("hidden");
+  document.getElementById("icon-cart-header").setAttribute("src", "../images/icon-cart.svg");
 })
